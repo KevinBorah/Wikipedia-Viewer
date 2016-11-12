@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Build a Wikipedia Viewer</title>
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <style>
+      body {
+   background-color: #151517;
+}
+
+.main-body {
+  background-image: url(https://res.cloudinary.com/kevin-borah/image/upload/v1475778960/Black_and_Blue_Shards_fccaxs.jpg);
+   color: #8D8B90;
+   padding: 40px 0 40px 0;
+}
+
+.blue-well {
+   background-color: #35309F;
+   border-color: #AF99F9;
+}
+
+.btn-custom {
+   background-image: url(https://res.cloudinary.com/kevin-borah/image/upload/v1475778960/Black_and_Blue_Shards_fccaxs.jpg);
+   color: #35309F;
+}
+
+.results {
+   color: #8D8B90;
+   display: inline;
+}
+
+.footer {
+   background-image: url(https://res.cloudinary.com/kevin-borah/image/upload/v1475778960/Black_and_Green_Shards_kvd7qc.jpg);
+   border-color:#24A900;
+   color:#24A900;
+}
+
+.footer-well {
+   background-color: #24A900;
+   border-color: #000000;
+   color: #272725;
+}
+
+.my-pages {
+   list-style-type: none;
+   padding: none;
+   margin: none;
+   color: #171717 !important;
+   text-shadow: none !important;
+}
+
+.my-pages li {
+   display: inline;
+}
+
+.logo {
+   width: 25px;
+   display: inline;
+   margin: -12px 5px 0 0;
+   padding: none;
+}
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" >
+
+  <div class="container-fluid">
+   <div class="col-md-offset-1 col-md-10 main-body" id="main-body">
+      <h1 style="padding:40px 0 40px 0;" class="text-center"><i style="color: #35309F;" class="fa fa-code"></i>Wikipedia Viewer<i style="color: #35309F;" class="fa fa-code"></i></h1>
+      <div class="row text-center" id="search-area">
+
+         <a href="https://en.wikipedia.org/wiki/Special:Random" target="blank"><h3 class="results">Click here to view a random wikipedia article</h3></a>
+         <!--<div id="search-well">
+            <button style="color: #35309F; margin-top: 20px;" type="button" class="btn btn-link" id="search-icon"><i class="fa fa-search fa-4x"></i></button>
+         </div>-->
+         <div style="margin-top: 20px" class="col-md-offset-4 col-md-4 well blue-well text-left">
+            <form id="search-form">
+               <input style="margin-bottom: 10px" type="text" class="form-control" id="search" placeholder="Enter Your Wikipedia Search Here">
+               <button type="button" class="btn btn-custom" id="search-submit">Search</button>
+            </form>
+         </div>
+
+      </div>
+      <div class="row" id="results">
+
+      </div>
+   </div>
+   <div class="row" id="footer">
+      <div class="col-md-12 footer">
+         <div class="col-md-offset-1 col-md-3 well footer-well">
+            <h6 class="text-center"><i class="fa fa-code"></i>Coded for the Build a Wikipedia Viewer challenge on <a style="color: #272725; text-decoration:underline" href="https://www.freecodecamp.com" target="blank">freecodecamp.com</a>.<i class="fa fa-code"></i></h6>
+         </div>
+         <div class="col-md-4">
+            <h6 class="text-center" style="text-shadow: 2px -1px #000000; padding-top: 21px"><i class="fa fa-fw fa-code"></i>Coded by Kevin Borah kevinborah1994@gmail.com<a href="#" target="blank" style="color: #24A900;"><i class="fa fa-fw fa-code"></i></a></h6>
+         </div>
+         <div class="col-md-3 well footer-well">
+            <ul class="text-center my-pages" id="my-pages">
+               <li>
+                  <a class="my-pages" href="https://codepen.io/KevinBorah/full/yavGbE/" target="blank"><img id="logo" alt="Kevin Borah's logo" class="logo my-pages img img-responsive" src="https://res.cloudinary.com/kevin-borah/image/upload/v1475718309/kevin-borah-logo-less-margin_myujut.png"></a>
+               </li>
+               <li><a class="my-pages" href="https://codepen.io/KevinBorah/" target="blank"><i id="codepen" class="fa fa-fw fa-codepen fa-2x"></i></a></li>
+               <li><a class="my-pages" href="https://github.com/KevinBorah" target="blank"><i id="git" class="fa fa-fw fa-github fa-2x"></i></a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-58d22c749295bca52f487966e382a94a495ac103faca9206cbd160bdf8aedf2a.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script>
+    $(document).ready(function () {
+    pageBounce();
+    $('#search-form').keypress(function (event) {
+        return event.keyCode != 13;
+    });
+    $('#search-submit').on('click', function () {
+        search = $('#search').val();
+        $('#search').val('');
+        wikiSearch();
+    });
+});
+var search;
+function wikiSearch() {
+    $.getJSON('https://en.wikipedia.org/w/api.php?action=query&list=search&callback=?&format=json&srlimit=5&srinterwiki=true&srprop=snippet&srsearch=' + search, function (json) {
+        var title = '<h1 style="padding:40px 0 40px 0;" class="text-center"><i style="color: #35309F;" class="fa fa-code"></i>top 5 Wikipedia results for ' + search + '<i style="color: #35309F;" class="fa fa-code"></i></h1>';
+        var result1 = '<a href="https://en.wikipedia.org/wiki/' + json.query.search['0'].title + '"target="blank"><div class="col-md-offset-2 col-md-8 well blue-well"><h3 class="results">' + json.query.search['0'].title + ':  </h3><p class="results">' + json.query.search['0'].snippet + '...</p></div></a>';
+        var result2 = '<a href="https://en.wikipedia.org/wiki/' + json.query.search['1'].title + '"target="blank"><div class="col-md-offset-2 col-md-8 well blue-well"><h3 class="results">' + json.query.search['1'].title + ':  </h3><p class="results">' + json.query.search['1'].snippet + '...</p></div></a>';
+        var result3 = '<a href="https://en.wikipedia.org/wiki/' + json.query.search['2'].title + '"target="blank"><div class="col-md-offset-2 col-md-8 well blue-well"><h3 class="results">' + json.query.search['2'].title + ':  </h3><p class="results">' + json.query.search['2'].snippet + '...</p></div></a>';
+        var result4 = '<a href="https://en.wikipedia.org/wiki/' + json.query.search['3'].title + '"target="blank"><div class="col-md-offset-2 col-md-8 well blue-well"><h3 class="results">' + json.query.search['3'].title + ':  </h3><p class="results">' + json.query.search['3'].snippet + '...</p></div></a>';
+        var result5 = '<a href="https://en.wikipedia.org/wiki/' + json.query.search['4'].title + '"target="blank"><div class="col-md-offset-2 col-md-8 well blue-well"><h3 class="results">' + json.query.search['4'].title + ':  </h3><p class="results">' + json.query.search['4'].snippet + '...</p></div></a>';
+        $('#results').html(title + result1 + result2 + result3 + result4 + result5);
+    });
+}
+function pageBounce() {
+    $('#git').mouseenter(function () {
+        $('#git').addClass('animated bounce');
+    });
+    $('#git').mouseleave(function () {
+        $('#git').removeClass('animated bounce');
+    });
+    $('#codepen').mouseenter(function () {
+        $('#codepen').addClass('animated bounce');
+    });
+    $('#codepen').mouseleave(function () {
+        $('#codepen').removeClass('animated bounce');
+    });
+    $('#logo').mouseenter(function () {
+        $('#logo').addClass('animated bounce');
+    });
+    $('#logo').mouseleave(function () {
+        $('#logo').removeClass('animated bounce');
+    });
+}
+  //# sourceURL=pen.js
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
